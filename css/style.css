@@ -26,6 +26,10 @@ nav
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  margin-bottom: 100px;
   background-color: #AB2330;
 }
 
@@ -75,6 +79,7 @@ header
   color: #FFFFFF;
   text-align: center;
   padding: 20px;
+  padding-top: 285px;
 }
 
 header h1
@@ -84,7 +89,7 @@ header h1
 
 header p
 {
-  margin-bottom: 2em;
+  margin-bottom: 15em;
 }
 
 #sobre
@@ -98,6 +103,7 @@ header p
   color: #FFFFFF;
 }
 
+/* Sobre */
 #sobre h2
 {
   color: #FFFFFF;
@@ -112,6 +118,7 @@ header p
 #sobre .botao
 {
   background-color: #f1f1f1;
+  font-weight: bold;
   color: #1c1c1c;
 }
 
@@ -133,13 +140,16 @@ header p
   margin-top: 30px;
 }
 
-/* Clientes */
+/* Clientes */ 
 #clientes
 {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  justify-content: center;
 }
 
 #clientes h2
@@ -150,6 +160,57 @@ header p
 #clientes img
 {
   width: 100%;
+}
+
+.slider 
+{
+  width: 1000px;
+  height: 100px;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.slide 
+{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 8s linear infinite;
+}
+.slide img 
+{
+  height: 70px;
+  padding: 0 30px 0 30px;
+}
+
+@keyframes slideshow 
+{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+
+.slider::before, .slider::after 
+{
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+.slider::before 
+{
+  left: 0;
+  top: 0;
+}
+.slider::after 
+{
+  right:0;
+  top:0;
+  transform: rotateZ(180deg);
 }
 
 /* Contato */
@@ -165,6 +226,24 @@ header p
 #contato h2
 {
   color: #000000;
+}
+
+/* Onde Atua */
+#onde
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#onde h2
+{
+  color: #000000;
+}
+
+#onde img
+{
+  margin-bottom: 10px;
 }
 
 
