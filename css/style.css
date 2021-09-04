@@ -128,16 +128,15 @@ header p
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 30px;
+  margin-top: 30px;
 }
 
-#servicos
+#servicos div img
 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 30px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Clientes */ 
